@@ -1,0 +1,97 @@
+body {
+    
+    background-image: url('images/1878488.jpg');
+  
+
+}
+
+h1 {
+    color: #0e3742;
+    font-size: 100px;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    width:100%;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,#0004);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+
+    
+
+    
+    
+}
+@keyframes animate {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+        color: #0e3742;
+        text-shadow: none; 
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+                    0 0 20px #03bcf4,
+                    0 0 40px #03bcf4,
+                    0 0 80px #03bcf4,
+                    0 0 160px #03bcf4;
+    }
+}
+
+.my_button {
+    width: 500px; /* Set your desired width */
+  height: 40px; /* Set your desired height */
+  font-size: 16px; /* Set your desired font size */
+  font-family: 'CustomFont', sans-serif; /* Use the custom font and provide fallback fonts */
+  
+  /* Center text vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Add rounded corners */
+  border-radius: 20px; /* Adjust the value for the desired level of rounding */
+  background-color: #007bff; /* Set a background color */
+  color: #fff; /* Set text color to white */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease;
+  margin-left: 720px;
+  
+    
+    
+     
+}
+.my_button:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan;
+    width: 200px;
+    height: 30px;
+    font-size: 40px;
+    
+}
+
+.button {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+    width: 300px;
+    height: 40px;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+    font-family:fantasy;
+    /* Center the text vertically and horizontally */ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Add rounded corners */
+    border-radius: 20px;
+    
+
+}

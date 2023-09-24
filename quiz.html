@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sergio Escuder">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="icon" type="fav.img" href="images/favicon-16x16.png">
+
+    <title>Doa Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <h1>DOA quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>Question 1:  Which character enters the competition in the hope that winning it will make his daughter see sense?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="Leon"> Leon
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="Bass"> Bass
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="Zack"> Zack
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p> Question 2: How are Ayane, Kasumi and Ein related?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="They all have the same career"> They all have the same career
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="They all choose to become hermits"> They all choose to become hermits
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="They all share at least one parent"> They all share at least one parent
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p> Question 3: Who is the daughter of Fame Douglas?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="helena"> Helena
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="Lei Fang"> Lei Fang
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="Kasumi"> Kasumi
+                    </label>
+                </div>
+            </div>
+
+            <button class="button" type="button" id="submitQuiz">Submit answers</button>
+        </form>
+
+        <!-- Add a hidden div for the quiz results -->
+        <div class="results" id="quizResults">
+            <h2>Quiz Results</h2>
+            <p>Your score: <span id="score">0</span> out of 3</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to calculate and display the quiz results
+        document.getElementById('submitQuiz').addEventListener('click', function() {
+            const form = document.getElementById('quizForm');
+            const scoreElement = document.getElementById('score');
+            const selectedAnswers = [...form.elements].filter(e => e.type === 'radio' && e.checked);
+
+            // Count the correct answers
+            const correctAnswers = [
+                'Bass',  // Corrected answer for question 1
+                'They all share at least one parent',
+                'Kasumi' // Corrected answer for question 3
+            ];
+            let score = 0;
+            for (const answer of selectedAnswers) {
+                if (correctAnswers.includes(answer.value)) {
+                    score++;
+                }
+            }
+
+            // Display the score
+            scoreElement.textContent = score;
+            document.getElementById('quizResults').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
